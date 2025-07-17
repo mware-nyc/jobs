@@ -1,31 +1,24 @@
-# Biograph Cybersecurity Strategy: One-Year High-Level Plan
+# Biograph Cybersecurity Planning Discussion
 
 ## 🌟 Vision
 
-Enable Biograph to accelerate scientific and business innovation securely—by building on current foundations, maturing existing capabilities, and protecting sensitive data with resilience and trust. The approach is additive and strategic, enhancing what's in place with pragmatic evolution aligned to real-world threats.
+Enable Biograph to accelerate scientific and business innovation securely—by strengthening what works, advancing key capabilities, and protecting sensitive data with resilience and trust. This strategy builds incrementally on existing foundations, guided by real-world risks and practical execution.
+
+## 🔁 From Conversation to Continuous Execution
+This strategy framework is designed not just to diagnose gaps—but to spark momentum. By the end of this discussion, we will have identified:
+* Specific risks and challenges across your security domains
+* Practices that align to your culture, capabilities, and customer expectations
+* Tangible actions—big or small—that can help move your program forward
+
+We’ll take what we’ve uncovered together and shape it into a one-year security improvement plan that is:
+* Domain-driven – Focused on 2–3 security domains where progress will have the highest impact
+* Lens-aligned – Structured by the cross-functional realities of your organization (e.g., culture, measurement, execution)
+* Actionable – Grounded in realistic next steps that reflect your current maturity and operating environment
+* Measurable – Supported by simple metrics or milestones that show progress without creating noise
 
 ## 🔢 Strategic Framing: How We Approach the Security Discussion
 
 Biograph’s cybersecurity strategy is structured around two complementary layers: **cross-functional lenses** and **core security domains**.
-
-## 🔁 From Conversation to Continuous Execution
-This strategy framework is designed not just to diagnose gaps—but to spark momentum. By the end of this discussion, we will have identified:
-
-Specific risks and challenges across your security domains
-
-Practices that align to your culture, capabilities, and customer expectations
-
-Tangible actions—big or small—that can help move your program forward
-
-We’ll take what we’ve uncovered together and shape it into a one-year security improvement plan that is:
-
-Domain-driven – Focused on 2–3 security domains where progress will have the highest impact
-
-Lens-aligned – Structured by the cross-functional realities of your organization (e.g., culture, measurement, execution)
-
-Actionable – Grounded in realistic next steps that reflect your current maturity and operating environment
-
-Measurable – Supported by simple metrics or milestones that show progress without creating noise
 
 ### 🎯 Lenses: What Drives Focus
 
