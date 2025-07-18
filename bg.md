@@ -249,12 +249,14 @@ To start, some questions to consider against the above domains:
 
 </details>
 
+## 🧱 Security Domain Maturity Model (NIST-Aligned)
 
-## 🧱 IAM Tiering Model (NIST-Aligned)
+This tiering model can be applied across all seven security domains. Each tier represents increasing levels of consistency, integration, and impact. The rightmost column illustrates how each tier might manifest in the **Identity & Access Management (IAM)** domain as an example.
 
-| Tier | Description | IAM Characteristics |
-|------|-------------|----------------------|
-| **Tier 1: Partial** | Ad hoc, undocumented, reactive | - Shared admin accounts<br>- No formal provisioning<br>- Local identities unmanaged<br>- No access reviews |
-| **Tier 2: Risk-Informed** | Some policies exist; inconsistent enforcement | - MFA on some systems<br>- Manual provisioning/deprovisioning<br>- Periodic reviews (when triggered)<br>- Roles defined but not consistently applied |
-| **Tier 3: Repeatable** | Documented policies; consistent application | - Role-based access across most systems<br>- Joiner/mover/leaver process<br>- Quarterly access reviews<br>- Admin rights scoped and logged |
-| **Tier 4: Adaptive** | Dynamic, automated, metrics-driven | - Attribute-based access (ABAC) or centralized RBAC<br>- Just-in-time admin access<br>- Automated user lifecycle with audit hooks<br>- Real-time risk-based access controls |
+| Tier | General Description | Example: IAM Characteristics |
+|------|----------------------|-------------------------------|
+| **Tier 1: Partial** | Ad hoc, undocumented, reactive processes. Security is inconsistent, often dependent on individual effort rather than policy or tooling. | - Shared admin accounts<br>- No formal provisioning<br>- Local identities unmanaged<br>- No access reviews |
+| **Tier 2: Risk-Informed** | Some documented policies exist. Implementation is manual or inconsistent across teams. Decisions are influenced by known risks, but lack repeatability. | - MFA on some systems<br>- Manual provisioning/deprovisioning<br>- Periodic reviews (when triggered)<br>- Roles defined but not consistently applied |
+| **Tier 3: Repeatable** | Security policies and processes are well-documented and enforced consistently across environments. Key controls are monitored and integrated with workflows. | - Role-based access across most systems<br>- Joiner/mover/leaver process<br>- Quarterly access reviews<br>- Admin rights scoped and logged |
+| **Tier 4: Adaptive** | Security is dynamic, automated, and integrated with business context. Controls are risk-aware, continuously validated, and support rapid change. | - Attribute-based access (ABAC) or centralized RBAC<br>- Just-in-time admin access<br>- Automated user lifecycle with audit hooks<br>- Real-time risk-based access controls |
+
