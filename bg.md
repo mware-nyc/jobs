@@ -74,7 +74,8 @@ To start, some questions to consider against the above domains:
 |----------------|---------|-------------|-----------|
 | Do our access controls reflect the expectations of high-net-worth clients for privacy and control, as well as the data-sharing needs of research partners? | How are identities managed in practice across teams and systems—and how much variation is there in how people access what they need? | Do we regularly audit access and track privilege creep? | How consistent and centralized is access control across your systems today—and how much of it depends on manual effort or tribal knowledge? |
 | How mature is the process for requesting, approving, and tracking 3rd party access? | What is our risk appetite for malicious employee activity? | Is there a central location tracking all roles and access? | What is our confidence that former employees do not have access to any system? |
-| Are access boundaries enforced for high-risk systems such as AI models, production automation, or sensitive datasets? | Who is expected to own access hygiene within business units—and is that expectation clear? | How long would it take to determine the blast radius of a successful employee ATO (account takeover)? |  |
+| Are access boundaries enforced for high-risk systems such as AI models, production automation, or sensitive datasets? | Who is expected to own access hygiene within business units—and is that expectation clear? | How long would it take to determine the blast radius of a successful employee ATO (account takeover)? | Are MFA methods standardized, logged, and regularly reviewed for strength and usability? |
+| Do all high-risk systems—including admin interfaces—enforce MFA consistently across user types? | How do teams perceive the usability and burden of MFA in day-to-day access? | Do we track MFA enrollment rates and bypass events across users and systems? | Are privileged access sessions isolated, monitored, and auditable through PAM tooling or compensating controls? |
 |  |  | What is the average time to deprovision access after employee termination? |  |
 
 </details>
@@ -85,16 +86,18 @@ To start, some questions to consider against the above domains:
 | Risk Alignment | Culture | Measurement | Execution |
 |----------------|---------|-------------|-----------|
 | Formalize criteria and workflows for assigning access based on business role, data sensitivity, and operational context | Form GRC Leadership Team | Identify audit gaps | Evaluate IAM maturity using NIST-aligned tiers |
-| Centralize IAM | Train users and admins on access hygiene and privilege minimization | Use nudges/gamification | Integrate into onboarding |
+| Require MFA for all privileged access and sensitive data workflows | Train users and admins on access hygiene and privilege minimization | Use nudges/gamification | Integrate into onboarding |
 | 3rd-party penetration testing | Promote ownership and accountability for privileged access | Audit trails and provisioning error tracking<br>Visualize access flows | Embed IAM in engineering conversations |
-|  | Clarify decision-making boundaries between security, IT, and business owners for access changes | Track time-to-deprovision from termination to removal | Automate provisioning and enforce least privilege |
-|  |  | Track blast radius readiness for employee ATO scenarios | Tag and audit privileged accounts |
-|  |  |  | Assign and document ownership for IAM operations (roles, provisioning, reviews) |
-|  |  |  | Integrate IAM metrics into business reporting |
+| Enforce just-in-time privileged access for high-risk systems | Clarify decision-making boundaries between security, IT, and business owners for access changes | Track time-to-deprovision from termination to removal | Automate provisioning and enforce least privilege |
+| Maintain a credential vault or equivalent for privileged accounts | Educate teams on the importance of MFA and reduce friction in adoption | Track blast radius readiness for employee ATO scenarios | Tag and audit privileged accounts |
+|  |  | Track MFA coverage by user group, application, and device type | Assign and document ownership for IAM operations (roles, provisioning, reviews) |
+|  |  | Monitor failed or bypassed MFA attempts for potential abuse patterns | Integrate IAM metrics into business reporting |
 |  |  |  | Adopt continuous access verification (e.g., re-auth for sensitive actions) |
+|  |  |  | Consolidate MFA enforcement through identity providers or centralized SSO platforms |
+|  |  |  | Regularly validate and update approved MFA methods (e.g., remove SMS if outdated) |
+|  |  |  | Monitor and alert on privileged session activity via PAM tooling or log analysis |
 
 </details>
-
 
 ### Data Protection
 <details>
@@ -103,8 +106,11 @@ To start, some questions to consider against the above domains:
 
 | Risk Alignment | Culture | Measurement | Execution |
 |----------------|---------|-------------|-----------|
-| Are our practices aligned with data privacy, retention, and breach readiness standards? | Are teams aware of how to handle sensitive data in practice? | Do we know where sensitive data resides and flows? | Do we have effective tools and processes for classification, DLP, and data discovery—and are they in active use? |
-|  | Is there a shared understanding of what qualifies as sensitive or regulated data across teams? | Do we measure data access frequency, movement, and anomalies? |  |
+| Are our data protection practices aligned with applicable privacy laws, contract terms, and risk tolerance? | Are teams aware of which types of data are subject to special handling, retention limits, or legal restrictions? | Do we know where sensitive data is stored, processed, and transmitted—across SaaS, cloud, and local systems? | Do we have effective tools and processes for classification, DLP, and discovery—and are they in active use? |
+| Are legal hold obligations integrated into our data lifecycle and deletion practices? | Is there a shared understanding of what qualifies as sensitive or regulated data across teams? | Do we track data access frequency, data movement patterns, and anomaly indicators? | Can we apply and enforce legal holds across structured and unstructured systems? |
+| Do we consider jurisdiction-specific privacy obligations (e.g., CCPA, GDPR) in our data handling practices? | Is there a documented escalation path for legal or compliance review of unusual or risky data handling scenarios? | Do we track response times and closure rates for data subject rights requests? | Are legal hold actions logged, auditable, and reversible if needed? |
+| Are access controls on sensitive data based on business need and reviewed regularly? | Do teams understand the risks of casual overexposure, including data shared in Slack, spreadsheets, or unapproved apps? | Are sensitive data flows and access mapped by role, system, and third-party exposure? | Are breach readiness activities tested and documented—including cloud and third-party scenarios? |
+| Do we minimize data collection and retention by default? | Do teams understand what kinds of data they are generating, storing, or exporting? | Do we measure our data footprint (e.g., total volume, duplication, unstructured sprawl)? | Are unstructured data stores (e.g., shared drives, collaboration tools) governed consistently? |
 
 </details>
 <details>
@@ -112,14 +118,15 @@ To start, some questions to consider against the above domains:
 
 | Risk Alignment | Culture | Measurement | Execution |
 |----------------|---------|-------------|-----------|
-| Map to HIPAA/SOC2/contractual obligations | Align classification to contract data types | Flag exposure across third-party tools | Document breach readiness |
-| Train teams using real examples | Cheat sheets by role | Normalize data minimization conversations | Flag unknown/ambiguous data use |
-| Identify flows | Promote ownership of data flows | Track near-miss incidents | Generate heatmaps |
-| Use discovery/classification tools | Host data handling ‘tabletop’ scenarios to reinforce practices and surface gray areas | Build data maps with ownership tags | Inventory third-party access |
-|  |  | Monitor trends in data access, transfers, and anomalies to validate minimization and retention policies | Create labeled data inventories with ownership, classification, and system context |
+| Map data protection controls to HIPAA/SOC 2/contractual/privacy obligations | Align classification to contract or regulatory data types | Flag exposure across third-party SaaS platforms | Document breach readiness plans and run scenario tests |
+| Identify and map sensitive data flows across environments | Create role-specific cheat sheets for data handling | Track near-miss incidents and informal disclosures | Tag and inventory unstructured data (e.g., shared folders, cloud docs) |
+| Apply minimization principles to data collection, retention, and export | Reinforce ownership of sensitive data flows and lifecycle responsibilities | Build dashboards for data movement and access risk | Inventory third-party data processors and access scopes |
+| Use discovery/classification tooling across structured and unstructured systems | Host data tabletop scenarios that involve legal and business risk decisions | Track volume and growth of unstructured or redundant data | Automate classification and labeling in cloud and SaaS environments |
+| Align legal hold procedures with retention and deletion policies | Train teams to recognize data classification cues and apply appropriately | Monitor legal hold enforcement across systems | Automate legal hold application in collaboration and storage platforms |
+| Maintain a system of record for legal data requests, exemptions, and overrides | Clarify escalation procedures for ambiguous data use cases | Monitor trends in data access and data rights request patterns | Ensure legal holds override any retention policy conflicts |
+| Tag and track data subject rights requests (e.g., access, deletion) | Normalize conversations around unnecessary data collection or access | Track data inventory and ownership coverage | Enforce ownership tagging in data lakes, shared drives, and external data tools |
 
 </details>
-
 
 ### Threat Detection & Response
 <details>
