@@ -64,8 +64,9 @@ To start, some questions to consider against the above domains:
 | Risk Alignment | Culture | Measurement | Execution |
 |----------------|---------|-------------|-----------|
 | Do our access controls reflect the expectations of high-net-worth clients for privacy and control, as well as the data-sharing needs of research partners? | How are identities managed in practice across teams and systems—and how much variation is there in how people access what they need? | Do we regularly audit access and track privilege creep? | How consistent and centralized is access control across your systems today—and how much of it depends on manual effort or tribal knowledge? |
-| How mature is the process for requesting, approving, and tracking 3rd party access? |  |  |  |
-| How well-defined and mature is our access control model (e.g., RBAC, ABAC, attribute inheritance)? |  |  |  |
+| How mature is the process for requesting, approving, and tracking 3rd party access? | What is our risk appetite for malicious employee activity? | Is there a central location tracking all roles and access? | What is our confidence that former employees do not have access to any system? |
+| How well-defined and mature is our access control model (e.g., RBAC, ABAC, attribute inheritance)? |  | How long would it take to determine the blast radius of a successful employee ATO (account takeover)? |  |
+
 
 </details>
 
