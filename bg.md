@@ -36,9 +36,10 @@ The lenses are applied across seven core **security domains**, where specific im
 
 Each domain represents a distinct area of operational focus. Applying the lenses we'll uncover: What’s working? What’s risky? What’s cultural? What’s measurable? What’s executable?
 
+---
 <details>
 <summary>  
-  
+
 ## 🔁 From Conversation to Continuous Execution
 
 </summary>
@@ -104,7 +105,7 @@ To start, some questions to consider against the above domains:
 |----------------|---------|-------------|-----------|
 | Are our practices aligned with data privacy, retention, and breach readiness standards? | Are teams aware of how to handle sensitive data in practice? | Do we know where sensitive data resides and flows? | Do we have effective tools and processes for classification, DLP, and data discovery—and are they in active use? |
 | Are legal hold obligations integrated into our data lifecycle and deletion practices? | Is there a shared understanding of what qualifies as sensitive or regulated data across teams? | Do we measure data access frequency, movement, and anomalies? | Can we apply and enforce legal holds across structured and unstructured systems? |
-|  |  |  | Are legal hold actions logged, auditable, and reversible if needed? |
+| Do we consider jurisdiction-specific privacy obligations (e.g., CCPA, GDPR) in our data handling practices? | Is there a clear process for involving legal in data-related decisions, such as retention overrides, disclosures, or incident response? |  | Are legal hold actions logged, auditable, and reversible if needed? |
 
 </details>
 <details>
@@ -117,10 +118,10 @@ To start, some questions to consider against the above domains:
 | Identify flows | Promote ownership of data flows | Track near-miss incidents | Generate heatmaps |
 | Use discovery/classification tools | Host data handling ‘tabletop’ scenarios to reinforce practices and surface gray areas | Build data maps with ownership tags | Inventory third-party access |
 | Align legal hold procedures with data retention and destruction policies | Reinforce awareness of legal hold requirements with business and legal teams | Monitor legal hold enforcement across systems | Automate legal hold application in email, storage, and SaaS platforms |
-|  |  |  | Ensure legal holds override conflicting data retention/deletion automation |
+| Maintain a system of record for legal data requests, exemptions, and retention overrides |  |  | Ensure legal holds override conflicting data retention/deletion automation |
+|  |  |  | Tag and track data subject rights requests (e.g., access, deletion) for CCPA/GDPR-relevant users |
 
 </details>
-
 
 ### Threat Detection & Response
 <details>
@@ -131,9 +132,12 @@ To start, some questions to consider against the above domains:
 |----------------|---------|-------------|-----------|
 | Do we meet internal and contractual expectations for detection and response timeframes? | Are IR plans tested and embraced across teams—or siloed to security? | Are alerts actionable and outcomes tracked (MTTD, MTTR)? | Do we operate SIEM/XDR or rely on MDR, and is it effective? |
 | Are detection priorities mapped to the highest-impact threats for our environment? | Do responders feel empowered and clear on their roles during incidents? | Are we measuring detection fidelity and false positive rates? | Do we test and simulate our response process across critical systems regularly? |
+| Are alert escalation paths clearly defined for working hours and after hours? | Do on-call responders understand their role—and have authority to act? | Do we track triage time in addition to resolution time? | Is there a reliable, tested workflow from alert → triage → resolution? |
+|  |  |  | Are on-call rotations documented and integrated with alerting platforms (e.g., PagerDuty, Opsgenie)? |
 
 </details>
 <details>
+
 <summary> Actions</summary>
 
 | Risk Alignment | Culture | Measurement | Execution |
@@ -142,9 +146,12 @@ To start, some questions to consider against the above domains:
 | Map detection coverage to threat modeling results | Run tabletop scenarios | Track alert/resolution trends | Tune detection logic |
 | Identify regulatory gaps in response capabilities | Identify cross-functional responders | Log detection-to-resolution timelines | Assign expectations pre/during/post-incident |
 | Build triage playbooks | Clarify IR ownership and expectations for non-security teams | Audit missed alerts quarterly | Report IR metrics |
-|  | Include IR in onboarding | Measure and reduce false positive rates | Retention alignment |
-|  |  | Monitor responder workload and resolution bottlenecks | Distinguish noise vs. signal |
-|  |  |  | Assign IR ownership |
+| Define alert severity levels and corresponding escalation protocols | Include IR in onboarding | Measure and reduce false positive rates | Retention alignment |
+|  | Include on-call responsibilities in job descriptions or rotations | Monitor responder workload and resolution bottlenecks | Distinguish noise vs. signal |
+|  |  | Track time from alert trigger to human acknowledgment | Assign IR ownership |
+|  |  |  | Integrate alerting tools (e.g., PagerDuty) with IR workflows and documentation |
+|  |  |  | Run real-time alert-to-triage simulations (not just tabletops) |
+|  |  |  | Ensure MDR escalation rules are understood, validated, and tuned |
 |  |  |  | Validate MDR contract scope and SLA performance |
 
 </details>
@@ -184,6 +191,7 @@ To start, some questions to consider against the above domains:
 |----------------|---------|-------------|-----------|
 | Are our network and infrastructure controls aligned with the sensitivity of hosted data and services? | Do infrastructure and DevOps teams view network and infra hardening as part of their delivery responsibilities? | Do we track exposure metrics (e.g., open ports, unused services, misconfigurations)? | How quickly can we detect, respond to, and remediate unauthorized changes in infrastructure or network configuration? |
 | Are segmentation, zoning, and boundary controls in place for high-risk environments (e.g., production, regulated data)? | Is there consistent use of infrastructure-as-code and policy-as-code to support secure-by-default deployments? | Do we monitor baseline posture across cloud and on-prem infrastructure? | Are changes to infrastructure and network configurations logged, reviewed, and auditable? |
+| Are we monitoring for signs of malicious control or compromise in open source infrastructure tools or deployment pipelines? | Do teams understand the risks of using widely adopted open source infra tools maintained by unknown or low-trust maintainers? | Do we track dependencies on open source tooling and validate the trustworthiness of their sources? | Are infrastructure components scanned for compromised or hijacked OSS dependencies before and during deployment? |
 
 </details>
 <details>
@@ -195,10 +203,10 @@ To start, some questions to consider against the above domains:
 | Align security groups, firewalls, and routing to data classification | Integrate security into infrastructure-as-code and CI/CD workflows | Monitor drift from known-good configurations | Enforce change control for network and infrastructure updates |
 | Evaluate risks from hybrid cloud/on-prem interconnectivity | Normalize security expectations in SRE and platform teams | Measure success of patching and remediation SLAs for infrastructure | Automate alerts for anomalous infra/network behavior |
 | Implement baseline controls across all environments (cloud, on-prem, hybrid) | Reinforce secure deployment patterns in engineering onboarding | Audit unused services and misconfigured components regularly | Use policy-as-code to enforce configuration standards |
+| Maintain a verified list of critical open source infrastructure components and their maintainers | Train teams on OSS governance and the risks of repo takeovers | Track open source tool usage by criticality and maintainer reputation | Integrate dependency scanning into infrastructure CI/CD and IaC pipelines |
 |  |  | Track time-to-remediate misconfigurations | Tag critical infrastructure components for prioritized protection |
 
 </details>
-
 
 ### Application Security
 <details>
@@ -208,6 +216,7 @@ To start, some questions to consider against the above domains:
 |----------------|---------|-------------|-----------|
 | How well does our current application security approach reflect the kinds of risks the business actually cares about? | When engineering teams move fast, how does security stay involved—if at all—across design, coding, review, and deployment? | How do you measure the effectiveness of application security today—if at all? | What parts of application security are currently automated or repeatable—and what still depends on manual effort or one-off reviews? |
 | Are legacy and modern applications assessed differently based on architecture and exposure? | Do developers see security as a shared responsibility or as a compliance checkbox? | Do we track security regression trends or repeat vulnerabilities over time? | Are secure-by-default patterns embedded in reusable code, templates, or libraries? |
+| Do we assess the trustworthiness and maintenance health of open source libraries before adoption? | Do engineering teams understand the risks of repo hijacking, abandoned projects, and shadow maintainers in OSS? | Do we monitor for risky or suspicious open source library activity (e.g., sudden maintainer changes, C2 callbacks)? | Are package sources and maintainers verified through registries, mirrors, or internal proxy services before builds? |
 
 </details>
 <details>
@@ -220,6 +229,7 @@ To start, some questions to consider against the above domains:
 | Define AppSec gates by risk profile | Promote developer-led security improvements and success stories | Track pre-release findings | Secure coding standards |
 | Evaluate risk exposure of legacy vs. cloud-native apps | Bug bounty program | Time-to-fix by severity | Automate secrets/dependency scans |
 | Include AppSec in customer assurance and legal conversations | Normalize developer ownership of security | Escape rate | Embed AppSec in product planning |
+| Maintain a policy for assessing open source libraries based on contributor history, update cadence, and security track record | Train devs to recognize signs of malicious OSS repos (e.g., name lookalikes, abandoned packages with new maintainers) | Track dependency age, release activity, and issue closure velocity for key OSS packages | Use internal package proxies or mirrors to pin known-good versions and mitigate sudden upstream compromise |
 |  |  | Clarify ownership | Tag security items in backlog |
 |  |  | Track recurrence of previously remediated vulnerabilities | Secrets remediation sprint |
 |  |  |  | Monthly AppSec reporting |
@@ -228,6 +238,7 @@ To start, some questions to consider against the above domains:
 |  |  |  | Provide self-service tooling for dependency scanning and secrets detection |
 
 </details>
+
 
 ### Resilience & Continuity
 
