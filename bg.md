@@ -65,8 +65,8 @@ To start, some questions to consider against the above domains:
 |----------------|---------|-------------|-----------|
 | Do our access controls reflect the expectations of high-net-worth clients for privacy and control, as well as the data-sharing needs of research partners? | How are identities managed in practice across teams and systems—and how much variation is there in how people access what they need? | Do we regularly audit access and track privilege creep? | How consistent and centralized is access control across your systems today—and how much of it depends on manual effort or tribal knowledge? |
 | How mature is the process for requesting, approving, and tracking 3rd party access? | What is our risk appetite for malicious employee activity? | Is there a central location tracking all roles and access? | What is our confidence that former employees do not have access to any system? |
-| How well-defined and mature is our access control model (e.g., RBAC, ABAC, attribute inheritance)? |  | How long would it take to determine the blast radius of a successful employee ATO (account takeover)? |  |
-
+| Are access boundaries enforced for high-risk systems such as AI models, production automation, or sensitive datasets? | Who is expected to own access hygiene within business units—and is that expectation clear? | How long would it take to determine the blast radius of a successful employee ATO (account takeover)? |  |
+|  |  | What is the average time to deprovision access after employee termination? |  |
 
 </details>
 
@@ -76,15 +76,16 @@ To start, some questions to consider against the above domains:
 | Risk Alignment | Culture | Measurement | Execution |
 |----------------|---------|-------------|-----------|
 | Formalize criteria and workflows for assigning access based on business role, data sensitivity, and operational context | Form GRC Leadership Team | Identify audit gaps | Evaluate IAM maturity using NIST-aligned tiers |
-| Centralize IAM  | Train users and admins on access hygiene and privilege minimization | Use nudges/gamification | Integrate into onboarding |
-| 3rd-party penetration testing | Automate provisioning | Audit trails and provisioning error tracking<br>Visualize access flows | Translate customer expectations |
-|  | Promote ownership and accountability for privileged access | Document ownership | Embed IAM in engineering conversations |
-|  |  |  | Tag and audit privileged accounts |
-|  |  |  | Assign ownership for provisioning integrity |
-|  |  |  | Integrate metrics into reporting |
-
+| Centralize IAM | Train users and admins on access hygiene and privilege minimization | Use nudges/gamification | Integrate into onboarding |
+| 3rd-party penetration testing | Promote ownership and accountability for privileged access | Audit trails and provisioning error tracking<br>Visualize access flows | Embed IAM in engineering conversations |
+|  | Clarify decision-making boundaries between security, IT, and business owners for access changes | Track time-to-deprovision from termination to removal | Automate provisioning and enforce least privilege |
+|  |  | Track blast radius readiness for employee ATO scenarios | Tag and audit privileged accounts |
+|  |  |  | Assign and document ownership for IAM operations (roles, provisioning, reviews) |
+|  |  |  | Integrate IAM metrics into business reporting |
+|  |  |  | Adopt continuous access verification (e.g., re-auth for sensitive actions) |
 
 </details>
+
 
 ### Data Protection
 <details>
@@ -93,7 +94,8 @@ To start, some questions to consider against the above domains:
 
 | Risk Alignment | Culture | Measurement | Execution |
 |----------------|---------|-------------|-----------|
-| Are our practices aligned with data privacy, retention, and breach readiness standards? | Are teams aware of how to handle sensitive data in practice? | Do we know where sensitive data resides and flows? | Do we have tools for classification, DLP, and discovery? |
+| Are our practices aligned with data privacy, retention, and breach readiness standards? | Are teams aware of how to handle sensitive data in practice? | Do we know where sensitive data resides and flows? | Do we have effective tools and processes for classification, DLP, and data discovery—and are they in active use? |
+|  | Is there a shared understanding of what qualifies as sensitive or regulated data across teams? | Do we measure data access frequency, movement, and anomalies? |  |
 
 </details>
 <details>
@@ -103,13 +105,12 @@ To start, some questions to consider against the above domains:
 |----------------|---------|-------------|-----------|
 | Map to HIPAA/SOC2/contractual obligations | Align classification to contract data types | Flag exposure across third-party tools | Document breach readiness |
 | Train teams using real examples | Cheat sheets by role | Normalize data minimization conversations | Flag unknown/ambiguous data use |
-| Identify flows | Classify high-risk data | Track near-miss incidents | Generate heatmaps |
-| Use discovery/classification tools | DLP aligned to workflows | Build data maps with ownership tags | Inventory third-party access |
-|  |  |  | Promote ownership of data flows |
-|  |  |  | Tag/label sensitive cloud data |
-
+| Identify flows | Promote ownership of data flows | Track near-miss incidents | Generate heatmaps |
+| Use discovery/classification tools | Host data handling ‘tabletop’ scenarios to reinforce practices and surface gray areas | Build data maps with ownership tags | Inventory third-party access |
+|  |  | Monitor trends in data access, transfers, and anomalies to validate minimization and retention policies | Create labeled data inventories with ownership, classification, and system context |
 
 </details>
+
 
 ### Threat Detection & Response
 <details>
@@ -119,6 +120,7 @@ To start, some questions to consider against the above domains:
 | Risk Alignment | Culture | Measurement | Execution |
 |----------------|---------|-------------|-----------|
 | Do we meet internal and contractual expectations for detection and response timeframes? | Are IR plans tested and embraced across teams—or siloed to security? | Are alerts actionable and outcomes tracked (MTTD, MTTR)? | Do we operate SIEM/XDR or rely on MDR, and is it effective? |
+| Are detection priorities mapped to the highest-impact threats for our environment? | Do responders feel empowered and clear on their roles during incidents? | Are we measuring detection fidelity and false positive rates? | Do we test and simulate our response process across critical systems regularly? |
 
 </details>
 <details>
@@ -127,13 +129,13 @@ To start, some questions to consider against the above domains:
 | Risk Alignment | Culture | Measurement | Execution |
 |----------------|---------|-------------|-----------|
 | Review IR obligations | Validate breach workflows | Confirm policies for regulated environments | Audit logs for defensibility |
-| Run tabletop scenarios | Identify cross-functional responders | Clarify communication plans | Assign expectations pre/during/post-incident |
-| Track alert/resolution trends | Log detection-to-resolution timelines | Audit missed alerts quarterly | Report IR metrics |
-| Build triage playbooks | Validate tooling | Consider MDR | Tune detection logic |
-|  |  |  | Retention alignment |
-|  |  |  | Include IR in onboarding |
-|  |  |  | Distinguish noise vs. signal |
+| Map detection coverage to threat modeling results | Run tabletop scenarios | Track alert/resolution trends | Tune detection logic |
+| Identify regulatory gaps in response capabilities | Identify cross-functional responders | Log detection-to-resolution timelines | Assign expectations pre/during/post-incident |
+| Build triage playbooks | Clarify IR ownership and expectations for non-security teams | Audit missed alerts quarterly | Report IR metrics |
+|  | Include IR in onboarding | Measure and reduce false positive rates | Retention alignment |
+|  |  | Monitor responder workload and resolution bottlenecks | Distinguish noise vs. signal |
 |  |  |  | Assign IR ownership |
+|  |  |  | Validate MDR contract scope and SLA performance |
 
 </details>
 
@@ -145,6 +147,7 @@ To start, some questions to consider against the above domains:
 | Risk Alignment | Culture | Measurement | Execution |
 |----------------|---------|-------------|-----------|
 | Do we meet baseline standards for EDR, encryption, and configuration in regulated environments? | Do employees and contractors understand endpoint risks and acceptable use? | Can we monitor device compliance and policy status continuously? | Can we patch and configure devices at scale across environments? |
+| Are unmanaged or personal devices assessed for risk based on access level or data exposure? | Do employees view endpoint policies as enablers of trust and productivity—or friction? | Do we track patch success/failure rates and config drift trends? | How quickly can we isolate or replace a compromised endpoint in practice? |
 
 </details>
 <details>
@@ -153,14 +156,39 @@ To start, some questions to consider against the above domains:
 | Risk Alignment | Culture | Measurement | Execution |
 |----------------|---------|-------------|-----------|
 | Align controls to classification tiers | Confirm with auditors | Track device lifecycle | Flag gaps between environments |
-| Awareness training by persona | Set policy norms | Assign accountability | Campaigns on threats |
-| Patch lag and coverage | Detect config drift | Compare EDR by team | Build dashboards |
-| EDR rollout by user type | Enforce MDM/config baselines | Automate patching | Inventory unmanaged devices |
-|  |  |  | Show endpoint threat resilience |
-|  |  |  | Gamify patching |
+| Awareness training by persona | Set policy norms | Assign accountability | Build dashboards |
+| Patch lag and coverage | Run recurring awareness campaigns on phishing, malware, and device risks | Compare EDR by team | Inventory unmanaged devices |
+| EDR rollout by user type | Gamify patching | Monitor patch success rates and failure causes by device group | Automate patching |
+| Evaluate unmanaged and BYOD risk zones | Reinforce secure endpoint behavior during onboarding | Detect config drift | Show endpoint threat resilience |
+|  |  |  | Establish rapid isolation/quarantine procedures for compromised devices |
 |  |  |  | Address BYOD risk |
 
 </details>
+
+### Infrastructure & Network Security
+<details>
+
+<summary> Questions</summary>
+
+| Risk Alignment | Culture | Measurement | Execution |
+|----------------|---------|-------------|-----------|
+| Are our network and infrastructure controls aligned with the sensitivity of hosted data and services? | Do infrastructure and DevOps teams view network and infra hardening as part of their delivery responsibilities? | Do we track exposure metrics (e.g., open ports, unused services, misconfigurations)? | How quickly can we detect, respond to, and remediate unauthorized changes in infrastructure or network configuration? |
+| Are segmentation, zoning, and boundary controls in place for high-risk environments (e.g., production, regulated data)? | Is there consistent use of infrastructure-as-code and policy-as-code to support secure-by-default deployments? | Do we monitor baseline posture across cloud and on-prem infrastructure? | Are changes to infrastructure and network configurations logged, reviewed, and auditable? |
+
+</details>
+<details>
+<summary> Actions</summary>
+
+| Risk Alignment | Culture | Measurement | Execution |
+|----------------|---------|-------------|-----------|
+| Apply least privilege principles to network flows and service accounts | Promote infrastructure ownership of security posture | Track external exposure (ports, endpoints, unused services) | Implement network segmentation and tiered access models |
+| Align security groups, firewalls, and routing to data classification | Integrate security into infrastructure-as-code and CI/CD workflows | Monitor drift from known-good configurations | Enforce change control for network and infrastructure updates |
+| Evaluate risks from hybrid cloud/on-prem interconnectivity | Normalize security expectations in SRE and platform teams | Measure success of patching and remediation SLAs for infrastructure | Automate alerts for anomalous infra/network behavior |
+| Implement baseline controls across all environments (cloud, on-prem, hybrid) | Reinforce secure deployment patterns in engineering onboarding | Audit unused services and misconfigured components regularly | Use policy-as-code to enforce configuration standards |
+|  |  | Track time-to-remediate misconfigurations | Tag critical infrastructure components for prioritized protection |
+
+</details>
+
 
 ### Application Security
 <details>
@@ -169,6 +197,7 @@ To start, some questions to consider against the above domains:
 | Risk Alignment | Culture | Measurement | Execution |
 |----------------|---------|-------------|-----------|
 | How well does our current application security approach reflect the kinds of risks the business actually cares about? | When engineering teams move fast, how does security stay involved—if at all—across design, coding, review, and deployment? | How do you measure the effectiveness of application security today—if at all? | What parts of application security are currently automated or repeatable—and what still depends on manual effort or one-off reviews? |
+| Are legacy and modern applications assessed differently based on architecture and exposure? | Do developers see security as a shared responsibility or as a compliance checkbox? | Do we track security regression trends or repeat vulnerabilities over time? | Are secure-by-default patterns embedded in reusable code, templates, or libraries? |
 
 </details>
 <details>
@@ -177,14 +206,16 @@ To start, some questions to consider against the above domains:
 | Risk Alignment | Culture | Measurement | Execution |
 |----------------|---------|-------------|-----------|
 | Map controls to trust/delivery needs | Tier by app/data sensitivity | Align threat modeling to business features | Show security during customer reviews |
-| CI/CD reviews | Security champions | Threat modeling checklists | Secure coding standards |
-| Track pre-release findings | Time-to-fix by severity | Escape rate | Tag security items in backlog |
-| Add SAST to CI/CD | Bug bounty program | Clarify ownership | Automate secrets/dependency scans |
-|  |  |  | Embed AppSec in product planning |
-|  |  |  | Secrets remediation sprint |
+| Align security controls to SLA/impact tiers | Security champions | Threat modeling checklists | Embed security reviews into CI/CD pipelines with risk-based gates |
+| Define AppSec gates by risk profile | Promote developer-led security improvements and success stories | Track pre-release findings | Secure coding standards |
+| Evaluate risk exposure of legacy vs. cloud-native apps | Bug bounty program | Time-to-fix by severity | Automate secrets/dependency scans |
+| Include AppSec in customer assurance and legal conversations | Normalize developer ownership of security | Escape rate | Embed AppSec in product planning |
+|  |  | Clarify ownership | Tag security items in backlog |
+|  |  | Track recurrence of previously remediated vulnerabilities | Secrets remediation sprint |
 |  |  |  | Monthly AppSec reporting |
 |  |  |  | Secure code review playbooks |
-
+|  |  |  | Build secure-by-default libraries and infrastructure templates |
+|  |  |  | Provide self-service tooling for dependency scanning and secrets detection |
 
 </details>
 
@@ -196,6 +227,7 @@ To start, some questions to consider against the above domains:
 | Risk Alignment | Culture | Measurement | Execution |
 |----------------|---------|-------------|-----------|
 | Do our recovery and continuity practices meet internal SLAs and any contractual or regulatory obligations? | Are continuity plans documented and rehearsed beyond just the IT team? | Are RTO/RPO metrics tracked and reported for key services? | Do we have a reliable and tested recovery process for critical systems? |
+| Do continuity strategies account for supply chain or third-party service disruptions? | Do business leaders understand their role in resilience planning and recovery decision-making? | Do we measure time-to-detect and time-to-initiate failover or recovery operations? | Are continuity procedures tested under realistic, high-pressure scenarios? |
 
 </details>
 <details>
@@ -205,16 +237,18 @@ To start, some questions to consider against the above domains:
 | Risk Alignment | Culture | Measurement | Execution |
 |----------------|---------|-------------|-----------|
 | Align DR to SLAs | Validate vendors | Include plans in due diligence | Demonstrate audit readiness |
-| Cross-team training | Simulate system loss | Define restore ownership | Document dependencies |
-| Backup coverage | RTO/RPO tracking | Dependency mapping | Test logs |
-| Backup/DR inventory | Automate testing | Write top-system runbooks | Assign metric owners |
-|  |  |  | Risk exceptions flagged |
+| Assess critical third-party dependencies and incorporate them into DR planning | Cross-team training | Define restore ownership | Document dependencies |
+| Backup coverage | Simulate system loss | RTO/RPO tracking | Test logs |
+| Backup/DR inventory | Establish executive and business-unit continuity playbooks and expectations | Dependency mapping | Assign metric owners |
+|  |  | Track time-to-initiate failover or recovery in exercises and real events | Risk exceptions flagged |
 |  |  |  | Include in onboarding |
 |  |  |  | Gap visualization |
 |  |  |  | Snapshot/rollback tooling |
-
+|  |  |  | Conduct chaos engineering or stress testing for critical systems |
+|  |  |  | Validate cross-region/cloud failover scenarios (if applicable) |
 
 </details>
+
 
 ## 🧱 IAM Tiering Model (NIST-Aligned)
 
