@@ -5,7 +5,7 @@
 Enable Biograph to accelerate scientific and business innovation securely—by strengthening what works, advancing key capabilities, and protecting sensitive data with resilience and trust. This strategy builds incrementally on existing foundations, guided by real-world risks and practical execution.
 
 ## 🔁 From Conversation to Continuous Execution
-This strategy framework is designed to provided a basis for prioritizing the continuous execution of security priorities. By the end of this discussion, we will have identified:
+This strategy framework is designed to provide a basis for prioritizing the continuous execution of security priorities. By the end of this discussion, we will have identified:
 * Potential opportunities and challenges across your security domains
 * Practices that align to your culture, capabilities, and customer expectations
 * Tangible actions—big or small—that can strengthen your current program 
@@ -270,7 +270,7 @@ To translate strategy into sustained progress, Biograph will establish a simple,
 | Data Protection                 | % of sensitive data classified and tagged<br>Unmapped third-party data flows<br>DLP incidents per month |
 | Threat Detection & Response     | MTTD/MTTR (Mean Time to Detect/Respond)<br>% of alerts triaged within SLA<br>Tabletop exercise participation rate |
 | Endpoint & Device Security      | Patch success rate<br>EDR coverage by device type<br>BYOD device compliance rate |
-| Application Security            | % of apps with SAST/SCA coverage<br>Vuln time-to-fix by severity<br>Recurring flaw reintroductions |
+| Application Security            | % of apps with SAST/SCA coverage<br>Vulnerability time-to-fix by severity<br>Recurring flaw reintroductions |
 | Infrastructure & Network Security | % of systems covered by IaC with policy-as-code<br>Unpatched exposed services<br>Drift from baseline configuration |
 | Resilience & Continuity        | RTO/RPO adherence<br>Backup test pass rate<br>Time to initiate failover |
 
