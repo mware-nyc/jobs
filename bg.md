@@ -249,6 +249,50 @@ To start, some questions to consider against the above domains:
 
 </details>
 
+## 📊 Security Metrics & Governance Framework
+
+To translate strategy into sustained progress, Biograph will establish a simple, actionable metrics and governance model. This ensures that security improvements are visible, measurable, and continuously aligned with risk and business priorities.
+
+### 🎯 Purpose
+
+- Make security progress transparent across domains and teams
+- Provide early signals of improvement, drift, or emerging gaps
+- Support prioritization and resource allocation with data
+- Align technical execution with leadership expectations
+
+### 📐 Metrics by Domain (Sample)
+
+| Domain                          | Sample Metrics                                                              |
+|---------------------------------|------------------------------------------------------------------------------|
+| Identity & Access Management    | % of users with least privilege access<br>Time to deprovision<br>Quarterly access review completion |
+| Data Protection                 | % of sensitive data classified and tagged<br>Unmapped third-party data flows<br>DLP incidents per month |
+| Threat Detection & Response     | MTTD/MTTR (Mean Time to Detect/Respond)<br>% of alerts triaged within SLA<br>Tabletop exercise participation rate |
+| Endpoint & Device Security      | Patch success rate<br>EDR coverage by device type<br>BYOD device compliance rate |
+| Application Security            | % of apps with SAST/SCA coverage<br>Vuln time-to-fix by severity<br>Recurring flaw reintroductions |
+| Infrastructure & Network Security | % of systems covered by IaC with policy-as-code<br>Unpatched exposed services<br>Drift from baseline configuration |
+| Resilience & Continuity        | RTO/RPO adherence<br>Backup test pass rate<br>Time to initiate failover |
+
+### 📅 Governance & Review Cadence
+
+| Level          | Audience           | Frequency     | Focus Areas                                |
+|----------------|--------------------|---------------|---------------------------------------------|
+| Operational    | Domain leads, SecOps | Monthly        | Metric trends, blockers, ownership updates  |
+| Cross-Functional | GRC, IT, Engineering | Quarterly      | Heatmap of domain maturity, shared initiatives |
+| Executive      | Security & Business Leaders | Biannually     | Risk posture, investment needs, progress summary |
+
+### 🗺️ Maturity & Progress Visualization
+
+Teams can use a **color-coded heatmap or scorecard** to visualize progress against maturity tiers across domains.
+
+| Domain                        | Current Tier | Target Tier | Status     |
+|-------------------------------|--------------|-------------|------------|
+| Identity & Access Management  | Tier 2       | Tier 3      | 🟡 In Progress |
+| Application Security          | Tier 1       | Tier 3      | 🔴 Needs Focus |
+| Resilience & Continuity       | Tier 3       | Tier 4      | 🟢 On Track |
+
+This structured governance layer ensures that security efforts stay aligned, accountable, and outcome-driven.
+
+
 ## 🧱 Security Domain Maturity Model (NIST-Aligned)
 
 This tiering model can be applied across all seven security domains. Each tier represents increasing levels of consistency, integration, and impact. The rightmost column illustrates how each tier might manifest in the **Identity & Access Management (IAM)** domain as an example.
