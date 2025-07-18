@@ -4,18 +4,6 @@
 
 Enable Biograph to accelerate scientific and business innovation securely—by strengthening what works, advancing key capabilities, and protecting sensitive data with resilience and trust. This strategy builds incrementally on existing foundations, guided by real-world risks and practical execution.
 
-## 🔁 From Conversation to Continuous Execution
-This strategy framework is designed to provide a basis for prioritizing the continuous execution of security priorities. By the end of this discussion, we will have identified:
-* Potential opportunities and challenges across your security domains
-* Practices that align to your culture, capabilities, and customer expectations
-* Tangible actions—big or small—that can strengthen your current program 
-
-Vetting and refining what is discussed here with stakeholders across the organization, security planning and execution will be:
-* Domain-driven – Focused on highest priority security domains where progress will have the highest impact
-* Lens-aligned – Structured by the cross-functional realities of your organization (e.g., culture, measurement, execution)
-* Actionable – Grounded in realistic next steps that reflect your current maturity and operating environment
-* Measurable – Supported by simple metrics or milestones that show progress without creating noise
-
 ## 🔢 Strategic Framing: How We Approach the Security Discussion
 
 Biograph’s cybersecurity strategy is structured around two complementary layers: **cross-functional lenses** and **core security domains**.
@@ -47,6 +35,26 @@ The lenses are applied across seven core **security domains**, where specific im
 - Resilience & Continuity  
 
 Each domain represents a distinct area of operational focus. Applying the lenses we'll uncover: What’s working? What’s risky? What’s cultural? What’s measurable? What’s executable?
+
+<details>
+<summary>  
+  
+## 🔁 From Conversation to Continuous Execution
+
+</summary>
+
+This strategy framework is designed to provide a basis for prioritizing the continuous execution of security priorities. By the end of this discussion, we will have identified:
+* Potential opportunities and challenges across your security domains
+* Practices that align to your culture, capabilities, and customer expectations
+* Tangible actions—big or small—that can strengthen your current program 
+
+Vetting and refining what is discussed here with stakeholders across the organization, security planning and execution will be:
+* Domain-driven – Focused on highest priority security domains where progress will have the highest impact
+* Lens-aligned – Structured by the cross-functional realities of your organization (e.g., culture, measurement, execution)
+* Actionable – Grounded in realistic next steps that reflect your current maturity and operating environment
+* Measurable – Supported by simple metrics or milestones that show progress without creating noise
+
+</details>  
 
 ### 🔍 Focus Questions
 
