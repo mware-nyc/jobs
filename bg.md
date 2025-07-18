@@ -100,7 +100,13 @@ To start, some questions to consider against the above domains:
 
 | Risk Alignment | Culture | Measurement | Execution |
 |----------------|---------|-------------|-----------|
-| - Map to HIPAA/SOC2/contractual obligations<br>- Train teams using real examples<br>- Identify flows<br>- Use discovery/classification tools | - Align classification to contract data types<br>- Cheat sheets by role<br>- Classify high-risk data<br>- DLP aligned to workflows | - Flag exposure across third-party tools<br>- Normalize data minimization conversations<br>- Track near-miss incidents<br>- Build data maps with ownership tags | - Document breach readiness<br>- Flag unknown/ambiguous data use<br>- Generate heatmaps<br>- Inventory third-party access<br>- Promote ownership of data flows<br>- Tag/label sensitive cloud data |
+| Map to HIPAA/SOC2/contractual obligations | Align classification to contract data types | Flag exposure across third-party tools | Document breach readiness |
+| Train teams using real examples | Cheat sheets by role | Normalize data minimization conversations | Flag unknown/ambiguous data use |
+| Identify flows | Classify high-risk data | Track near-miss incidents | Generate heatmaps |
+| Use discovery/classification tools | DLP aligned to workflows | Build data maps with ownership tags | Inventory third-party access |
+|  |  |  | Promote ownership of data flows |
+|  |  |  | Tag/label sensitive cloud data |
+
 
 </details>
 
@@ -119,7 +125,14 @@ To start, some questions to consider against the above domains:
 
 | Risk Alignment | Culture | Measurement | Execution |
 |----------------|---------|-------------|-----------|
-| - Review IR obligations<br>- Run tabletop scenarios<br>- Track alert/resolution trends<br>- Build triage playbooks | - Validate breach workflows<br>- Identify cross-functional responders<br>- Log detection-to-resolution timelines<br>- Validate tooling | - Confirm policies for regulated environments<br>- Clarify communication plans<br>- Audit missed alerts quarterly<br>- Consider MDR | - Audit logs for defensibility<br>- Assign expectations pre/during/post-incident<br>- Report IR metrics<br>- Tune detection logic<br>- Retention alignment<br>- Include IR in onboarding<br>- Distinguish noise vs. signal<br>- Assign IR ownership |
+| Review IR obligations | Validate breach workflows | Confirm policies for regulated environments | Audit logs for defensibility |
+| Run tabletop scenarios | Identify cross-functional responders | Clarify communication plans | Assign expectations pre/during/post-incident |
+| Track alert/resolution trends | Log detection-to-resolution timelines | Audit missed alerts quarterly | Report IR metrics |
+| Build triage playbooks | Validate tooling | Consider MDR | Tune detection logic |
+|  |  |  | Retention alignment |
+|  |  |  | Include IR in onboarding |
+|  |  |  | Distinguish noise vs. signal |
+|  |  |  | Assign IR ownership |
 
 </details>
 
@@ -138,7 +151,13 @@ To start, some questions to consider against the above domains:
 
 | Risk Alignment | Culture | Measurement | Execution |
 |----------------|---------|-------------|-----------|
-| - Align controls to classification tiers<br>- Awareness training by persona<br>- Patch lag and coverage<br>- EDR rollout by user type | - Confirm with auditors<br>- Set policy norms<br>- Detect config drift<br>- Enforce MDM/config baselines | - Track device lifecycle<br>- Assign accountability<br>- Compare EDR by team<br>- Automate patching | - Flag gaps between environments<br>- Campaigns on threats<br>- Build dashboards<br>- Inventory unmanaged devices<br>- Show endpoint threat resilience<br>- Gamify patching<br>- Address BYOD risk |
+| Align controls to classification tiers | Confirm with auditors | Track device lifecycle | Flag gaps between environments |
+| Awareness training by persona | Set policy norms | Assign accountability | Campaigns on threats |
+| Patch lag and coverage | Detect config drift | Compare EDR by team | Build dashboards |
+| EDR rollout by user type | Enforce MDM/config baselines | Automate patching | Inventory unmanaged devices |
+|  |  |  | Show endpoint threat resilience |
+|  |  |  | Gamify patching |
+|  |  |  | Address BYOD risk |
 
 </details>
 
@@ -156,7 +175,15 @@ To start, some questions to consider against the above domains:
 
 | Risk Alignment | Culture | Measurement | Execution |
 |----------------|---------|-------------|-----------|
-| - Map controls to trust/delivery needs<br>- CI/CD reviews<br>- Track pre-release findings<br>- Add SAST to CI/CD | - Tier by app/data sensitivity<br>- Security champions<br>- Time-to-fix by severity<br>- Bug bounty program | - Align threat modeling to business features<br>- Threat modeling checklists<br>- Escape rate<br>- Clarify ownership | - Show security during customer reviews<br>- Secure coding standards<br>- Tag security items in backlog<br>- Automate secrets/dependency scans<br>- Embed AppSec in product planning<br>- Secrets remediation sprint<br>- Monthly AppSec reporting<br>- Secure code review playbooks |
+| Map controls to trust/delivery needs | Tier by app/data sensitivity | Align threat modeling to business features | Show security during customer reviews |
+| CI/CD reviews | Security champions | Threat modeling checklists | Secure coding standards |
+| Track pre-release findings | Time-to-fix by severity | Escape rate | Tag security items in backlog |
+| Add SAST to CI/CD | Bug bounty program | Clarify ownership | Automate secrets/dependency scans |
+|  |  |  | Embed AppSec in product planning |
+|  |  |  | Secrets remediation sprint |
+|  |  |  | Monthly AppSec reporting |
+|  |  |  | Secure code review playbooks |
+
 
 </details>
 
@@ -176,7 +203,15 @@ To start, some questions to consider against the above domains:
 
 | Risk Alignment | Culture | Measurement | Execution |
 |----------------|---------|-------------|-----------|
-| - Align DR to SLAs<br>- Cross-team training<br>- Backup coverage<br>- Backup/DR inventory | - Validate vendors<br>- Simulate system loss<br>- RTO/RPO tracking<br>- Automate testing | - Include plans in due diligence<br>- Define restore ownership<br>- Dependency mapping<br>- Write top-system runbooks | - Demonstrate audit readiness<br>- Document dependencies<br>- Test logs<br>- Assign metric owners<br>- Risk exceptions flagged<br>- Include in onboarding<br>- Gap visualization<br>- Snapshot/rollback tooling |
+| Align DR to SLAs | Validate vendors | Include plans in due diligence | Demonstrate audit readiness |
+| Cross-team training | Simulate system loss | Define restore ownership | Document dependencies |
+| Backup coverage | RTO/RPO tracking | Dependency mapping | Test logs |
+| Backup/DR inventory | Automate testing | Write top-system runbooks | Assign metric owners |
+|  |  |  | Risk exceptions flagged |
+|  |  |  | Include in onboarding |
+|  |  |  | Gap visualization |
+|  |  |  | Snapshot/rollback tooling |
+
 
 </details>
 
