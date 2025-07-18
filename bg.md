@@ -8,7 +8,7 @@ Enable Biograph to accelerate scientific and business innovation securely—by s
 
 This strategic framework is structured around two complementary layers: **cross-functional lenses** and **core security domains**.
 
-### 🎯 Lenses: What Drives Focus
+### 🔍 Lenses: What Drives Focus
 
 These are the strategic dimensions we use to frame challenges and opportunities across all areas of security:
 
@@ -57,7 +57,7 @@ Vetting and refining what is discussed here with stakeholders across the organiz
 
 </details>
 
-### 🔍 Focus Questions
+### ❔ Focus Questions
 
 To start, some questions to consider against the above domains:
 
@@ -268,7 +268,12 @@ To start, some questions to consider against the above domains:
 
 </details>
 
-## 🧭 Managing the Work That Follows
+<details>
+<summary>
+
+  ## 🧭 Managing the Work That Follows
+
+</summary>
 
 The planning and prioritization outlined in this document will generate meaningful security work—some immediate, some iterative. Executing on these priorities requires thoughtful coordination across contributors, teams, and timeframes, especially when resources are distributed and not all stakeholders are present in initial conversations.
 
@@ -299,7 +304,15 @@ Drawing from **LEAN theory**, **Theory of Constraints**, and the **Agile Manifes
 
 By managing work as a continuous, collaborative flow—not a fixed checklist—we improve both execution and impact while reducing waste, rework, and burnout.
 
+</details>
+
+<details>
+<summary>
+
 ## 📊 Security Metrics & Governance Framework
+
+</summary>
+
 
 To translate strategy into sustained progress, Biograph will establish a simple, actionable metrics and governance model. This ensures that security improvements are visible, measurable, and continuously aligned with risk and business priorities.
 
@@ -342,8 +355,16 @@ Teams can use a **color-coded heatmap or scorecard** to visualize progress again
 
 This structured governance layer ensures that security efforts stay aligned, accountable, and outcome-driven.
 
+</details>
 
-## 🧱 Security Domain Maturity Model (NIST-Aligned)
+<details>
+<summary>
+
+## 📊 Security Metrics & Governance Framework
+
+</summary>
+
+## 🧱 Security Domain Maturity Model (Inspired by Industry and NIST Tiering)
 
 This tiering model can be applied across all seven security domains. Each tier represents increasing levels of consistency, integration, and impact. The rightmost column illustrates how each tier might manifest in the **Identity & Access Management (IAM)** domain as an example.
 
@@ -353,3 +374,5 @@ This tiering model can be applied across all seven security domains. Each tier r
 | **Tier 2: Risk-Informed** | Some documented policies exist. Implementation is manual or inconsistent across teams. Decisions are influenced by known risks, but lack repeatability. | - MFA on some systems<br>- Manual provisioning/deprovisioning<br>- Periodic reviews (when triggered)<br>- Roles defined but not consistently applied |
 | **Tier 3: Repeatable** | Security policies and processes are well-documented and enforced consistently across environments. Key controls are monitored and integrated with workflows. | - Role-based access across most systems<br>- Joiner/mover/leaver process<br>- Quarterly access reviews<br>- Admin rights scoped and logged |
 | **Tier 4: Adaptive** | Security is dynamic, automated, and integrated with business context. Controls are risk-aware, continuously validated, and support rapid change. | - Attribute-based access (ABAC) or centralized RBAC<br>- Just-in-time admin access<br>- Automated user lifecycle with audit hooks<br>- Real-time risk-based access controls |
+
+</details>
