@@ -95,7 +95,8 @@ To start, some questions to consider against the above domains:
 | Risk Alignment | Culture | Measurement | Execution |
 |----------------|---------|-------------|-----------|
 | Are our practices aligned with data privacy, retention, and breach readiness standards? | Are teams aware of how to handle sensitive data in practice? | Do we know where sensitive data resides and flows? | Do we have effective tools and processes for classification, DLP, and data discovery—and are they in active use? |
-|  | Is there a shared understanding of what qualifies as sensitive or regulated data across teams? | Do we measure data access frequency, movement, and anomalies? |  |
+| Are legal hold obligations integrated into our data lifecycle and deletion practices? | Is there a shared understanding of what qualifies as sensitive or regulated data across teams? | Do we measure data access frequency, movement, and anomalies? | Can we apply and enforce legal holds across structured and unstructured systems? |
+|  |  |  | Are legal hold actions logged, auditable, and reversible if needed? |
 
 </details>
 <details>
@@ -107,7 +108,8 @@ To start, some questions to consider against the above domains:
 | Train teams using real examples | Cheat sheets by role | Normalize data minimization conversations | Flag unknown/ambiguous data use |
 | Identify flows | Promote ownership of data flows | Track near-miss incidents | Generate heatmaps |
 | Use discovery/classification tools | Host data handling ‘tabletop’ scenarios to reinforce practices and surface gray areas | Build data maps with ownership tags | Inventory third-party access |
-|  |  | Monitor trends in data access, transfers, and anomalies to validate minimization and retention policies | Create labeled data inventories with ownership, classification, and system context |
+| Align legal hold procedures with data retention and destruction policies | Reinforce awareness of legal hold requirements with business and legal teams | Monitor legal hold enforcement across systems | Automate legal hold application in email, storage, and SaaS platforms |
+|  |  |  | Ensure legal holds override conflicting data retention/deletion automation |
 
 </details>
 
