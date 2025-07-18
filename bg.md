@@ -5,13 +5,13 @@
 Enable Biograph to accelerate scientific and business innovation securely—by strengthening what works, advancing key capabilities, and protecting sensitive data with resilience and trust. This strategy builds incrementally on existing foundations, guided by real-world risks and practical execution.
 
 ## 🔁 From Conversation to Continuous Execution
-This strategy framework is designed not just to diagnose gaps—but to spark momentum. By the end of this discussion, we will have identified:
-* Specific risks and challenges across your security domains
+This strategy framework is designed to provided a basis for prioritizing the contiunous execution of security priorities. By the end of this discussion, we will have identified:
+* Potention opportunities and challenges across your security domains
 * Practices that align to your culture, capabilities, and customer expectations
-* Tangible actions—big or small—that can help move your program forward
+* Tangible actions—big or small—that can strengthen your current program 
 
-We’ll take what we’ve uncovered together and shape it into a one-year security improvement plan that is:
-* Domain-driven – Focused on 2–3 security domains where progress will have the highest impact
+Vetting and refining what is discussed here with stakeholders across the organization, security planning and execution will be:
+* Domain-driven – Focused on highest priority security domains where progress will have the highest impact
 * Lens-aligned – Structured by the cross-functional realities of your organization (e.g., culture, measurement, execution)
 * Actionable – Grounded in realistic next steps that reflect your current maturity and operating environment
 * Measurable – Supported by simple metrics or milestones that show progress without creating noise
@@ -46,11 +46,11 @@ The lenses are applied across seven core **security domains**, where specific im
 - Infrastructure & Network Security  
 - Resilience & Continuity  
 
-Each domain represents a distinct area of operational focus. As we review each, we use the lenses to guide discussion: What’s working? What’s risky? What’s cultural? What’s measurable? What’s executable?
+Each domain represents a distinct area of operational focus. Applying the lenses we'll uncover: What’s working? What’s risky? What’s cultural? What’s measurable? What’s executable?
 
 ### 🔍 Focus Questions
 
-To help stakeholders engage meaningfully, we also ask:
+To start, some questions to consider against the above domains:
 
 - Where do you see the biggest opportunity for impact if we made security improvements?
 - Which domain gets the most discussion or attention internally right now?
