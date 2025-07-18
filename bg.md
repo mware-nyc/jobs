@@ -360,11 +360,9 @@ This structured governance layer ensures that security efforts stay aligned, acc
 <details>
 <summary>
 
-## 📊 Security Metrics & Governance Framework
+## 🧱 Security Domain Maturity Model (Inspired by Industry and NIST Tiering)
 
 </summary>
-
-## 🧱 Security Domain Maturity Model (Inspired by Industry and NIST Tiering)
 
 This tiering model can be applied across all seven security domains. Each tier represents increasing levels of consistency, integration, and impact. The rightmost column illustrates how each tier might manifest in the **Identity & Access Management (IAM)** domain as an example.
 
