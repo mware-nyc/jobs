@@ -5,8 +5,8 @@
 Enable Biograph to accelerate scientific and business innovation securely—by strengthening what works, advancing key capabilities, and protecting sensitive data with resilience and trust. This strategy builds incrementally on existing foundations, guided by real-world risks and practical execution.
 
 ## 🔁 From Conversation to Continuous Execution
-This strategy framework is designed to provided a basis for prioritizing the contiunous execution of security priorities. By the end of this discussion, we will have identified:
-* Potention opportunities and challenges across your security domains
+This strategy framework is designed to provided a basis for prioritizing the continuous execution of security priorities. By the end of this discussion, we will have identified:
+* Potential opportunities and challenges across your security domains
 * Practices that align to your culture, capabilities, and customer expectations
 * Tangible actions—big or small—that can strengthen your current program 
 
@@ -75,7 +75,7 @@ To start, some questions to consider against the above domains:
 
 | Risk Alignment | Culture | Measurement | Execution |
 |----------------|---------|-------------|-----------|
-| Formalize criteria and workflows for assigning access based on business role, data sensitivity, and operational context | Identify access governance stakeholders | Identify audit gaps | Evaluate IAM maturity using NIST-aligned tiers |
+| Formalize criteria and workflows for assigning access based on business role, data sensitivity, and operational context | Form GRC Leadership Team | Identify audit gaps | Evaluate IAM maturity using NIST-aligned tiers |
 | Centralize IAM  | Train users and admins on access hygiene and privilege minimization | Use nudges/gamification | Integrate into onboarding |
 | 3rd-party penetration testing | Automate provisioning | Audit trails and provisioning error tracking<br>Visualize access flows | Translate customer expectations |
 |  | Promote ownership and accountability for privileged access | Document ownership | Embed IAM in engineering conversations |
